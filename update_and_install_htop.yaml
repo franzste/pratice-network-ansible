@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: opc
+  tasks:
+    - name: yum update and install htop
+      yum:
+        name: htop
+        state: latest
+        update_cache: yes
+      become: true
